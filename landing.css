@@ -1,0 +1,155 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /* Ensure the nav has a background */
+    padding: 1rem;
+    z-index: 10; /* Higher z-index for the nav */
+    position: fixed; /* Keep the nav fixed at the top */
+    width: 100%;
+}
+
+nav a {
+    color: #fbd717; /* Set text color */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Add padding for spacing */
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: bold; /* Set font weight */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav a:hover {
+    color: #8CC6EC; /* Change text color on hover */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 1rem; /* Add margin between navbar links */
+}
+
+/* Adjust styling for the active link */
+nav a.active {
+    color: #C3A71D; /* Change text color for active link */
+    border-bottom: 2px solid #C3A71D; /* Add bottom border for active link */
+}
+
+nav a:hover {
+    background-color: #c3a71d;
+}
+
+/* Style the navigation links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+main {
+    padding-top: 60px; /* Adjust this value to match the height of your navbar */
+}
+
+section {
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 60px); /* Make the section take up the full height of the viewport */
+    overflow: hidden; /* Hide any excess image */
+    position: relative; /* Ensure section is positioned correctly */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 6%;
+    margin-right: 1rem;
+}
+
+/* Style the footer */
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+#bg-img {
+    width: 100%;
+    height: 100vh; /* Fill the viewport height */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place the image behind everything */
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cover the entire section */
+    background-color: rgba(0, 0, 0, 0.5); /* Set the background color and opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* Adjust this value to start below the nav bar */
+    box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+#welcome-text {
+    font-size: 4rem; /* Set the font size of the welcome text */
+    color: white;
+}
+
+#sub-welcome-text {
+    font-size: 2rem; /* Set the font size of the subtext */
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background-color: #FBD717; /* Yellow shade on hover */
+    color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:focus,
+.cta-button:active {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #C3A71D; /* Darker yellow shade on focus and active */
+    color: white;
+}
